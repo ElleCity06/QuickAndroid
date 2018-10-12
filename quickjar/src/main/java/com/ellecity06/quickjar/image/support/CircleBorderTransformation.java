@@ -26,7 +26,7 @@ public class CircleBorderTransformation extends BitmapTransformation {
 
     private static final int VERSION = 1;
     private static final String ID =
-            "com.ljy.ring.devring.CircleBorderTransformation." + VERSION;
+            "com.ellecity06.quickjar.CircleBorderTransformation." + VERSION;
     private static final byte[] ID_BYTES = ID.getBytes(CHARSET);
 
     private Paint mBorderPaint;

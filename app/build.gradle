@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
@@ -17,11 +18,30 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    //greendao配置
+    greendao {
+        //数据库版本号，升级时进行修改
+        schemaVersion 1
+        daoPackage 'com.ellecity06.quickandroid.db' //生成的DAO，DaoMaster和DaoSession的包名。默认是实体的包名
+        targetGenDir 'src/main/java' //生成源文件的路径。默认源文件目录是在build目录中的(build/generated/source/greendao)
+    }
+
+// 启用Databinding
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:27.0.2'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     implementation project(':quickjar')
     testImplementation 'junit:junit:4.12'
@@ -30,4 +50,7 @@ dependencies {
     //dagger2依赖注入
     api 'com.google.dagger:dagger:2.14.1'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.14.1'
+    //══════════════════════资源绑定(ButterKnife)开始══════════════════════
+    api 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'//用于butterknife在编译时根据注解生成相关文件
 }

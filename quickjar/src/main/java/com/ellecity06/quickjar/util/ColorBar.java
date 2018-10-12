@@ -16,13 +16,6 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 
-/**
- * Created by zack on 17-5-14.
- * 导航栏/状态栏颜色设置工具类，具体用法参考以下地址
- * <a>https://github.com/Zackratos/UltimateBar</a>
- * <p>
- * modify ljy
- */
 
 /**
  * 导航栏颜色设置工具，用法参考 <a>https://github.com/Zackratos/UltimateBar</a>

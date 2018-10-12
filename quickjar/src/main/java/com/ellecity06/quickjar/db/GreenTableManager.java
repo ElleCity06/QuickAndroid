@@ -18,7 +18,7 @@ import java.util.List;
  * author:  ljy
  * date:    2018/3/10
  * description: GreenDao基本的表管理者
- * ITableManger以外的方法，请通过DevRing.<GreenTableManager>tableManager(key)来调用
+ * ITableManger以外的方法，请通过QuickAndroid.<GreenTableManager>tableManager(key)来调用
  * <p>
  * <a>https://www.jianshu.com/p/11bdd9d761e6</a>
  */

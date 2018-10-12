@@ -14,7 +14,7 @@ public class OtherConfig {
 
     private File mCrashDiaryFolder;
     private boolean mIsUseCrashDiary;
-    private boolean mIsShowRingLog;
+    private boolean mIsShowRingLog = true;
 
     public File getCrashDiaryFolder() {
         return mCrashDiaryFolder;

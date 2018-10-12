@@ -84,7 +84,7 @@ public class RxLifecycleUtil {
      * @return PublishSubject
      */
     public static PublishSubject<ActivityEvent> getActivityLifeSubject(String key) {
-        ActivityLife activityLife = QuickAndroid.ringComponent().activityLifeCallback().getActivityLife(key);
+        ActivityLife activityLife = QuickAndroid.elleCityComponent().activityLifeCallback().getActivityLife(key);
         if (activityLife == null) {
             throw new IllegalArgumentException("请确保该Activity实现了IBaseActivity接口");
         } else {
@@ -100,7 +100,7 @@ public class RxLifecycleUtil {
      * @return PublishSubject
      */
     public static PublishSubject<FragmentEvent> getFragmentLifeSubject(String key) {
-        FragmentLife fragmentLife = QuickAndroid.ringComponent().fragmentLifeCallback().getFragmentLife(key);
+        FragmentLife fragmentLife = QuickAndroid.elleCityComponent().fragmentLifeCallback().getFragmentLife(key);
         if (fragmentLife == null) {
             throw new IllegalArgumentException("请确保Fragment所在的Activity的isUseFragment()方法返回为true");
         }

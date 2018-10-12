@@ -4,6 +4,8 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.widget.ImageView;
 
+import com.ellecity06.quickjar.image.GlideManager;
+
 import java.io.File;
 
 /**
@@ -38,9 +40,12 @@ public interface IImageManager {
 
     void getBitmap(Context context, String url, ImageListener<Bitmap> imageListener);//加载网络图片，并通过imageListener回调返回Bitmap，回调在主线程
 
+    void loadGifListener(String url, ImageView imageView, LoadOption loadOption,GlideManager.GifListener gifListener);
+
     void downLoadImage(Context context, String url, File saveFile, ImageListener<File> imageListener);//下载网络图片，并通过imageListener回调返回下载得到的图片文件，回调在后台线程
 
     void clearMemoryCache();//清空内存缓存
 
     void clearDiskCache();//清空磁盘缓存
+
 }

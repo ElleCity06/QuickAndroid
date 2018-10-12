@@ -1,7 +1,7 @@
 package com.ellecity06.quickjar.image.support;
 
 /**
- * 临时的图片加载配置
+ * 图片加载配置,通过这个配置临时的配置，加载中的图片，圆形圆角等等图片
  *
  * @author: ellecity06
  * @e-mail: ellecity06@sina.com
@@ -18,6 +18,26 @@ public class LoadOption {
     private int mRoundRadius;//加载为圆角图片的圆角值
     private int mBlurRadius;//加载为模糊图片的模糊值
     private boolean mIsGray;//是否加载为灰白图片
+    private boolean isGif;
+    private int gifPlayCount = 1;
+
+    public int getGifPlayCount() {
+        return gifPlayCount;
+    }
+
+    public LoadOption setGifPlayCount(int gifPlayCount) {
+        this.gifPlayCount = gifPlayCount;
+        return this;
+    }
+
+    public boolean isGif() {
+        return isGif;
+    }
+
+    public LoadOption setGif(boolean gif) {
+        isGif = gif;
+        return this;
+    }
 
     public LoadOption() {
     }

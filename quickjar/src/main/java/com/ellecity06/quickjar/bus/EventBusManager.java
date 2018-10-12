@@ -8,11 +8,13 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 /**
- * EvenBus管理者，想要使用此事件管理的可以通过在Application中通过QuickAndroid.configurebus(new EventBusManager())进行配置
+ * EvenBus管理者，库中默认使用此事件管理
  *
  * @author: ellecity06
  * @e-mail: ellecity06@sina.com
  * @time: 2018/9/25 17:14
+ * 把成千上万的生灵放在一起，把坏的去掉，笼子里就没有那么欢腾了。----霍布斯
+ *
  */
 @Singleton
 public class EventBusManager implements IBusManager {

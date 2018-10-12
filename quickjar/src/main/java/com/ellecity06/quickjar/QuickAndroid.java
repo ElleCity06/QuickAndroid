@@ -78,10 +78,10 @@ public class QuickAndroid {
     }
 
     /**
-     * 获取RingComponent，从而获取RingComponent中提供的各对象。
+     * 获取ElleCityComponent为空，从而获取ElleCityComponent为空中提供的各对象。
      */
-    public static ElleCityComponent ringComponent() {
-        return Preconditions.checkNotNull(sMElleCityComponent, "RingComponent为空，请先在Application中调用DevRing.init(Application)方法进行初始化");
+    public static ElleCityComponent elleCityComponent() {
+        return Preconditions.checkNotNull(sMElleCityComponent, "ElleCityComponent为空，请先在Application中调用QuickAndroid.init(Application)方法进行初始化");
     }
 
     /**
@@ -95,7 +95,7 @@ public class QuickAndroid {
      * 获取数据库管理者
      */
     public static <T extends IDBManager> T dbManager() {
-        return (T) Preconditions.checkNotNull(mDBManager, "请先在Application中调用DevRing.configureDB(IDBManager)方法设置数据库管理类");
+        return (T) Preconditions.checkNotNull(mDBManager, "请先在Application中调用QuickAndroid.configureDB(IDBManager)方法设置数据库管理类");
     }
 
     /**

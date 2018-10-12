@@ -19,6 +19,8 @@ import com.ellecity06.quickjar.QuickAndroid;
 import java.io.File;
 import java.io.InputStream;
 
+import okhttp3.OkHttpClient;
+
 /**
  * author:  ljy
  * date:    2018/3/14
@@ -66,9 +68,16 @@ public class GlideConfigModule extends AppGlideModule {
     @Override
     public void registerComponents(@NonNull Context context, @NonNull Glide glide, @NonNull Registry registry) {
         //替换网络组件为okhttp3
+        //        if (mImageConfig.isUseOkhttp()) {
+        //            registry.replace(GlideUrl.class, InputStream.class, new OkHttpUrlLoader.Factory());
+        //        }
+        // 替换为可以加载https图片的okhttp
         if (mImageConfig.isUseOkhttp()) {
-            registry.replace(GlideUrl.class, InputStream.class, new OkHttpUrlLoader.Factory());
+            OkHttpClient client = UnsafeOkHttpClient.getUnsafeOkHttpClient();
+
+            registry.replace(GlideUrl.class, InputStream.class, new OkHttpUrlLoader.Factory(client));
         }
+
     }
 
     @Override

@@ -6,7 +6,8 @@ import com.ellecity06.quickjar.bus.support.rxbus.RxBus;
 
 
 /**
- * RxBus管理者，库中默认使用此事件管理，通过QuickAndroid.busmanager来调用
+ * RxBus管理者，，通过QuickAndroid.busmanager来调用<br>
+ *     想要使用此事件管理的可以通过在Application中通过QuickAndroid.configurebus(new RxBusManager())进行配置
  *
  * @author: ellecity06
  * @e-mail: ellecity06@sina.com

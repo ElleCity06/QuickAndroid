@@ -26,7 +26,7 @@ public class ElleCityToast {
      * @param charSequence 字符串
      */
     public static void show(CharSequence charSequence) {
-        Preconditions.checkNotNull(mContext, "context不能为空，请先在application中对DevRing进行初始化");
+        Preconditions.checkNotNull(mContext, "context不能为空，请先在application中对QuickAndroid进行初始化");
         if (mToast == null) {
             mToast = Toast.makeText(mContext, charSequence, Toast.LENGTH_SHORT);
         } else {
@@ -45,7 +45,7 @@ public class ElleCityToast {
      * @param charSequence 字符串
      */
     public static void showLong(CharSequence charSequence) {
-        Preconditions.checkNotNull(mContext, "context不能为空，请先在application中对DevRing进行初始化");
+        Preconditions.checkNotNull(mContext, "context不能为空，请先在application中对QuickAndroid进行初始化");
         if (mToast == null) {
             mToast = Toast.makeText(mContext, charSequence, Toast.LENGTH_LONG);
         } else {
@@ -64,7 +64,7 @@ public class ElleCityToast {
      * @param resId String资源ID
      */
     public static void show(int resId) {
-        Preconditions.checkNotNull(mContext, "context不能为空，请先在application中对DevRing进行初始化");
+        Preconditions.checkNotNull(mContext, "context不能为空，请先在application中对QuickAndroid进行初始化");
         if (mToast == null) {
             mToast = Toast.makeText(mContext, resId, Toast.LENGTH_SHORT);
         } else {
@@ -82,7 +82,7 @@ public class ElleCityToast {
      * @param resId String资源ID
      */
     public static void showLong(int resId) {
-        Preconditions.checkNotNull(mContext, "context不能为空，请先在application中对DevRing进行初始化");
+        Preconditions.checkNotNull(mContext, "context不能为空，请先在application中对QuickAndroid进行初始化");
         if (mToast == null) {
             mToast = Toast.makeText(mContext, resId, Toast.LENGTH_LONG);
         } else {

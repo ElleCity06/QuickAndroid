@@ -19,3 +19,7 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+
+# QuickAndroi的图片库使用到了反射glide的内部方法
+-keep class com.bumptech.glide.** {*;}

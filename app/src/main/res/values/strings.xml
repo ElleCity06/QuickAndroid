@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">QuickAndroid</string>
+    <string name="loading">正在加载...</string>
+    <string name="loadFail">加载不出数据</string>
+    <string name="loadFail_reload">点击屏幕重试</string>
+    <string name="no_data">没有数据哦</string>
+    <string name="load_all_finish">全部加载完毕</string>
 </resources>

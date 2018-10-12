@@ -24,11 +24,11 @@ public class ElleCityLog {
     public static final String LINE_SEPARATOR = System.getProperty("line.separator");
     public static final String NULL_TIPS = "Log with null object";
 
-    private static final String DEFAULT_MESSAGE = "execute";
+    private static final String DEFAULT_MESSAGE = "i am a logger";
     private static final String PARAM = "Param";
     private static final String NULL = "null";
     private static final String TAG_DEFAULT = "QuickAndroid";
-    private static final String SUFFIX = ".java";
+    private static final String SUFFIX = "QuickAndroid";
 
     public static final int JSON_INDENT = 4;
     public static final int V = 0x1;

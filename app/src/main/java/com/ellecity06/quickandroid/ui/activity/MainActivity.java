@@ -26,8 +26,6 @@ import com.ellecity06.quickandroid.ui.fragment.MainFragmentThree;
 import com.ellecity06.quickandroid.ui.fragment.MainFragmentTwo;
 import com.ellecity06.quickandroid.utils.PerfectClickListener;
 import com.ellecity06.quickandroid.utils.SPUtils;
-import com.ellecity06.quickandroid.widget.refresh.ElleCityRefreshLayout;
-import com.ellecity06.quickandroid.widget.refresh.LoadModel;
 import com.ellecity06.quickandroid.widget.statusbar.StatusBarUtil;
 import com.ellecity06.quickjar.QuickAndroid;
 import com.ellecity06.quickjar.image.support.LoadOption;
@@ -75,30 +73,30 @@ public class MainActivity extends BaseActivity implements View.OnClickListener, 
     protected void initView(Bundle savedInstanceState) {
         mFab.setVisibility(View.GONE);
         ImageView iv_test = findViewById(R.id.iv_test);
-        final ElleCityRefreshLayout rl_ref = findViewById(R.id.rl_ref);
+//        final SmartRefreshLayout rl_ref = findViewById(R.id.rl_ref);
 
-        rl_ref.addEasyEvent(new ElleCityRefreshLayout.EasyEvent() {
-            @Override
-            public void onLoadMore() {
-                rl_ref.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        rl_ref.loadMoreComplete();
-                    }
-                }, 2000);
-            }
-
-            @Override
-            public void onRefreshing() {
-                rl_ref.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        rl_ref.refreshComplete();
-                    }
-                }, 2000);
-            }
-        });
-        rl_ref.setLoadMoreModel(LoadModel.COMMON_MODEL);
+//        rl_ref.addEasyEvent(new ElleCityRefreshLayout.EasyEvent() {
+//            @Override
+//            public void onLoadMore() {
+//                rl_ref.postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        rl_ref.loadMoreComplete();
+//                    }
+//                }, 2000);
+//            }
+//
+//            @Override
+//            public void onRefreshing() {
+//                rl_ref.postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        rl_ref.refreshComplete();
+//                    }
+//                }, 2000);
+//            }
+//        });
+//        rl_ref.setLoadMoreModel(LoadModel.COMMON_MODEL);
 
         AnimationDrawable drawable = (AnimationDrawable) iv_test.getDrawable();
         drawable.start();

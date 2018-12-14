@@ -10,8 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.ellecity06.quickandroid.mvp.BasePresenter;
 import com.ellecity06.quickjar.base.fragment.IBaseFragment;
+import com.ellecity06.quickjar.base.mvp.BasePresenter;
 import com.ellecity06.quickjar.util.Preconditions;
 
 import javax.inject.Inject;
@@ -38,6 +38,7 @@ public abstract class BaseFragment<P extends BasePresenter> extends Fragment imp
     private boolean isFragmentVisible;
     //是否已经初始化加载过
     protected boolean isLoaded;
+
     //用于butterknife解绑
     private Unbinder unbinder;
     @Inject

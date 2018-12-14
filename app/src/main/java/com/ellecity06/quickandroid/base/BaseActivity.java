@@ -7,8 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
 
 import com.ellecity06.quickandroid.R;
-import com.ellecity06.quickandroid.mvp.BasePresenter;
 import com.ellecity06.quickjar.base.activity.IBaseActivity;
+import com.ellecity06.quickjar.base.mvp.BasePresenter;
 import com.ellecity06.quickjar.util.ColorBar;
 
 import javax.inject.Inject;
